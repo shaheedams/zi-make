@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --brand: #9A0039;
+    --color-white: #FFFFFF;
+    --color-primary: #9A0039;
+    --color-secondary: #0c0c0c;
+    --color-bg-primary: #EFEFF6;
+    --color-bg-secondary: #0c0c0c;
+    --color-bg-white: #FFFFFF;
+    --color-bg-brand-v: #ffdeff;
+    --color-bg-secondary-black: #151515;
+    font-size: 1.111vw;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--color-secondary);
+    background-color: var(--color-bg-white);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.zi_primary {
+    color: var(--color-primary);
+}
+
+.zi_mb_1 {
+    margin-bottom: 1rem;
+}
+
+.zi_mb_2 {
+    margin-bottom: 2rem;
+}
+
+.zi_make li {
+    list-style: none;
+}
+
+.zi_make a {
+    text-decoration: none;
+}
+
+.zi_upper_case {
+    text-transform: uppercase;
+}
+
+.zi_container {
+    padding: 7vw;
+}
+
+.zi_getQuote {
+    width: fit-content;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.zi_getQuote a {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.zi_getQuote_w {
+    background-color: var(--color-bg-white);
+}
+
+.zi_getQuote_w a {
+    color: var(--color-secondary);
+}
+
+.zi_getQuote_b {
+    background-color: var(--color-bg-secondary);
+}
+
+.zi_getQuote_b a {
+    color: var(--color-white);
+}
+
+.zi_getQuote_b:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar  */
+.zi_navbar {
+    background-color: var(--brand);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 7vw;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+}
+
+.zi_brand_logo img {
+    width: 8rem;
+}
+
+.zi_links ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.zi_links li a {
+    color: var(--color-white);
+    font-size: 1.125rem;
+}
+
+
+.zi_links li a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 0.1rem;
+    background-color: var(--color-bg-white);
+    margin-top: 0.2rem;
+    transition: all 0.8s;
+}
+
+.zi_links li a:hover::after {
+    width: 100%;
+    transition: all 0.8s;
+}
+
+/* Intro  */
+.zi_intro {
+    height: 50rem;
+}
+
+.zi_intro video {
+    width: 100%;
+}
+
+/* About us  */
+.zi_about_us {
+    background-color: var(--color-bg-primary);
+    text-align: center;
+}
+
+.zi_about_us h3 {
+    font-size: 1.4rem;
+}
+
+.zi_about_us h2 {
+    font-size: 2rem;
+}
+
+.zi_about_us p {
+    font-size: 1.2rem;
+}
+
+/* Testimonials */
+
+.zi_testimonial_container {
+    display: flex;
+}
+
+.zi_testimonial_content,
+.zi_testimonial_slides_container {
+    width: 50%;
+}
+
+.zi_testimonial_content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.zi_testimonial_content p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.zi_testimonial_pagination {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.zi_testimonial_pagination div svg {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.zi_testimonial_pagination div svg:hover {
+    background-color: var(--color-bg-secondary);
+}
+
+.zi_testimonial_pagination div svg:hover path {
+    stroke: var(--color-bg-primary);
+}
+
+.zi_testimonial_pagination div svg:hover .arrow_circle {
+    stroke: var(--color-bg-secondary);
+}
+
+.zi_testimonial_slides {
+    overflow: hidden;
+}
+
+.zi_testimonial_slides .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.zi_quote img {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.zi_review h3 {
+    margin-bottom: 1rem;
+}
+
+.zi_review p {
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Why us  */
+
+.zi_why_us_container {
+    display: flex;
+    gap: 2rem;
+}
+
+.zi_why_us_content {
+    width: 35%;
+}
+
+.zi_why_us_cards {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.zi_cards_wrap {
+    width: 48%;
+}
+
+.zi_why_us_card {
+    background-color: var(--color-bg-primary);
+    padding: 3.5rem 2rem 2rem;
+    height: 7rem;
+    transition: height 0.8s;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.zi_why_us_card::after {
+    content: '';
+    display: block;
+    width: 0.08rem;
+    height: 3rem;
+    background-color: var(--color-bg-secondary);
+    position: absolute;
+    top: 0;
+    right: 3rem;
+    transition: all 0.8s;
+}
+
+.zi_why_us_card::before {
+    content: '';
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--brand);
+    position: absolute;
+    top: 0;
+    right: 2.63rem;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.zi_why_us_card h4 {
+    padding-bottom: 1rem;
+}
+
+.zi_why_us_card p {
+    opacity: 0;
+    font-size: 0.8rem;
+    transition: opacity 0.8s;
+}
+
+.zi_why_us_card:hover {
+    height: 10rem;
+}
+
+.zi_why_us_card:hover::after {
+    height: 4rem;
+    background-color: var(--brand);
+}
+
+.zi_why_us_card:hover::before {
+    opacity: 1;
+    top: 4rem;
+}
+
+.zi_why_us_card:hover h4 {
+    color: var(--color-primary);
+}
+
+.zi_why_us_card:hover p {
+    opacity: 1;
+}
+
+.zi_why_us_content ul li {
+    list-style: initial;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+/* Services section  */
+
+#zi_services {
+    background-color: var(--color-bg-primary);
+}
+
+#zi_services h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#zi_services h3 {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.zi_services_list {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.zi_service_card {
+    background-color: var(--color-bg-white);
+    width: 32.2%;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.8s;
+}
+
+.zi_service_card img {
+    width: 50%;
+}
+
+.zi_service_card h4 {
+    margin: 1rem 0;
+}
+
+.zi_service_card p {
+    font-size: 0.8rem;
+}
+
+.zi_service_card::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 0.08rem;
+    background-color: var(--color-bg-secondary);
+    right: 0;
+    top: 4rem;
+    transition: all 0.8s;
+}
+
+.zi_service_card::before {
+    content: '';
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--brand);
+    position: absolute;
+    right: 3rem;
+    top: 3.65rem;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+/* .zi_service_card:hover{
+    transform: scale(1.05);
+} */
+
+.zi_service_card:hover h4 {
+    color: var(--color-primary);
+}
+
+.zi_service_card:hover::after {
+    width: 6rem;
+    background-color: var(--brand);
+}
+
+.zi_service_card:hover::before {
+    opacity: 1;
+    right: 6rem;
+}
+
+/* Contact us  */
+
+#zi_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-bg-primary);
+    gap: 2rem;
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#zi_contact h2 {
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.zi_contact_icons img {
+    position: absolute;
+}
+
+.zi_contact_icons img:nth-child(1) {
+    top: 4rem;
+    left: 8rem;
+    width: 2rem;
+    height: 2rem;
+    animation: float1 1.5s ease-in-out infinite;
+    -webkit-animation: float1 1.5s ease-in-out infinite;
+}
+
+.zi_contact_icons img:nth-child(4) {
+    top: 3rem;
+    right: 7rem;
+    width: 5.125rem;
+    height: 5.125rem;
+    animation: float4 1.5s ease-in-out infinite;
+    -webkit-animation: float4 1.5s ease-in-out infinite;
+}
+
+.zi_contact_icons img:nth-child(3) {
+    bottom: 4rem;
+    left: 18rem;
+    width: 5.125rem;
+    height: 5.125rem;
+    animation: float3 2s ease-in-out infinite;
+    -webkit-animation: float3 2s ease-in-out infinite;
+}
+
+.zi_contact_icons img:nth-child(2) {
+    bottom: 4rem;
+    right: 18rem;
+    width: 2rem;
+    height: 2rem;
+    animation: float2 2s ease-in-out infinite;
+    -webkit-animation: float2 2s ease-in-out infinite;
+    animation-delay: -1s;
+}
+
+
+@keyframes float1 {
+    0% {
+        top: 4rem;
+    }
+
+    50% {
+        top: 3rem;
+    }
+}
+
+@keyframes float2 {
+    0% {
+        bottom: 4rem;
+    }
+
+    50% {
+        bottom: 3rem;
+    }
+}
+
+@keyframes float3 {
+    0% {
+        bottom: 4rem;
+    }
+
+    50% {
+        bottom: 3rem;
+    }
+}
+
+@keyframes float4 {
+    0% {
+        top: 3rem;
+    }
+
+    50% {
+        top: 4rem;
+    }
+}
+
+
+/* Footer  */
+.zi_footer {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.zi_footer_head {
+    width: 35%;
+}
+
+.zi_footer_head div {
+    margin-bottom: 1.5rem;
+}
+
+.zi_social_icons ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.zi_social_icons ul img {
+    width: 3.188rem;
+}
+
+.zi_footer_description p {
+    font-size: 1.125rem;
+}
+
+.zi_footer_links li {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.zi_footer_links a {
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+.zi_footer_contact a {
+    color: var(--color-white);
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.zi_footer_contact a svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.zi_rights {
+    background-color: var(--color-bg-secondary-black);
+    padding: 1rem 7vw;
+    color: var(--color-white);
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.zi_goto_top {
+    background-color: var(--brand);
+    position: absolute;
+    right: 3rem;
+    bottom: 5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zi_goto_top img {
+    width: 2rem;
+    height: 2rem;
+}
